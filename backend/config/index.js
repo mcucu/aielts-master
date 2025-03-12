@@ -15,6 +15,12 @@ const config = {
     logger: {
         name: pkg.name,
         level: process.env.APP_DEBUG || 'trace',
+    },
+    openai: {
+        provider: process.env.OPENAI_PROVIDER || '',
+        apiUrl: process.env.OPENAI_API_URL || '',
+        apiKey: process.env.OPENAI_API_KEY || 'aieltsbe-ch@ng3me',
+        apiModel: process.env.OPENAI_API_MODEL || '',
     }
 };
 

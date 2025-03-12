@@ -4,7 +4,7 @@
   "description": "Backend Service AI Powered for IELTS Preparation Assistant using OpenAI",
   "main": "./src/index.js",
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=16.0.0"
   },
   "scripts": {
     "start": "node ./src/index.js",

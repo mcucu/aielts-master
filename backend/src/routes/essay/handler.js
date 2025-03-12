@@ -1,4 +1,5 @@
-const { successResponse } = require('../../utils');
+const { successResponse, throwError } = require('../../utils');
+const essayController = require('../../controllers/essay');
 
 /**
  * handler
@@ -21,17 +22,16 @@ const handler = async (req, res) => {
  * @param {function} next - next function
  */
 const essaySubmitHandler = async (req, res) => {
-    const lang = req.headers['accept-language'];
-    const { body } = req;
-    const {
-        authController
-    } = res.locals;
+    try {
+        const result = await essayController.analizeEssay(req);
 
-    const result = await authController.signInWithEmail(body, lang);
-
-    return res.json(
-        successResponse(result)
-    );
+        return res.json(
+            successResponse(result)
+        );
+    } catch (error) {
+        let { status, message } = error;
+        throw throwError(res, status, message)
+    }
 };
 
 module.exports = {

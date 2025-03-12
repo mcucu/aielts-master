@@ -1,4 +1,5 @@
 const { successResponse } = require('../../utils');
+const config = require('../../../config');
 
 /**
  * handler
@@ -7,11 +8,9 @@ const { successResponse } = require('../../utils');
  * @param {function} next - next function
  */
 const handler = async (req, res) => {
-    const lang = req.headers['accept-language'] || 'id-ID';
+    // const lang = req.headers['accept-language'] || 'id-ID';
 
-    return res.send(successResponse(`Hello World! ${lang}`));
+    return res.send(successResponse(`${config.name.toUpperCase()} is running`, config.description));
 };
-
-// successResponse(`${config.name.toUpperCase()} is running`, config.description)
 
 module.exports = handler;
