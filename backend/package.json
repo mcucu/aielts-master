@@ -1,0 +1,43 @@
+{
+  "name": "aielts-backend",
+  "version": "1.0.0",
+  "description": "Backend Service AI Powered for IELTS Preparation Assistant using OpenAI",
+  "main": "./src/index.js",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "dev:debug": "node --inspect ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcucu/aielts-master"
+  },
+  "keywords": [
+    "ai",
+    "ielts",
+    "aielts",
+    "openai",
+    "nodejs"
+  ],
+  "author": "mhd.cucu@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcucu/aielts-master/issues"
+  },
+  "homepage": "https://github.com/mcucu/aielts-master#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "openai": "^4.87.3",
+    "pino": "^9.6.0",
+    "pino-http": "^10.4.0"
+  }
+}
