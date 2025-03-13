@@ -5,5 +5,6 @@ const essayRouter = require('./handler');
 const router = Router();
 router.get('/essay', createHandler(essayRouter.handler));
 router.post('/essay/submit', createHandler(essayRouter.essaySubmitHandler));
+router.post('/essay/submit-v2', createHandler(essayRouter.essaySubmitV2Handler));
 
 module.exports = router;

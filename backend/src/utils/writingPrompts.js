@@ -53,8 +53,8 @@ Format your output as follows (without tags):
 ...`;
 }
 
-const getWritingEvaluationPrompt = (skill, essay) => {
-    const criteria = EVALUATION_CRITERIA[skill];
+const getWritingEvaluationPrompt = (skill, question, essay) => {
+    const criteria = constant.EVALUATION_CRITERIA[skill];
 
     return `As an experienced IELTS examiner, evaluate the following Task ${skill} essay according to the official IELTS Writing band descriptors.
     Consider these specific criteria for Task ${skill}:${criteria}
@@ -113,7 +113,9 @@ Provide a detailed evaluation in Markdown format using this structure:
 2. [actionable improvement step 2]
 3. [actionable improvement step 3]
 
-Essay to evaluate: ${essay}`;
+Below is a candidate's essay for ${skill}:
+${question && `Question: ${question}`}
+Essay: ${essay}`;
 }
 
 module.exports = {

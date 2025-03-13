@@ -116,12 +116,12 @@ const constant = {
         }
     },
     EVALUATION_CRITERIA: {
-        task1: `
+        'task1': `
 - Accurate data selection and comparison
 - Clear overview of main trends
 - Data presentation and progression
 - Appropriate use of language for data description`,
-    task2: `
+    'task2': `
 - Clear position throughout
 - Main ideas fully developed
 - Relevant examples and evidence
