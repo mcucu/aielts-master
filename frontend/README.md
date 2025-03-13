@@ -1,31 +1,69 @@
-# AIELTS Master - Frontend App
-Simple NodeJs Frontend App for IELTS Examiner using OpenAI.
+# Welcome to your Lovable project
 
-## Prerequisite
-- nodejs minimun version 12
-- installed docker & docker-compose
-- free port 3000
+## Project info
 
-## Technology Stack
-- nodejs
-- docker
+**URL**: https://lovable.dev/projects/1989f5ff-cd4d-43dc-b7d4-ddb91dfaf11d
 
-## How to run
-##### Clone Project
-- clone repository : `git clone git@github.com:mcucu/aielts-master .`
+## How can I edit this code?
 
-##### Setup dotenv
-- go to project folder : `cd aielts-master`
-- create .env file for auth service : `cp ./frontend/.env.example ./frontend/.env`
+There are several ways of editing your application.
 
-##### Run auth service
-1. go to service folder : `cd aielts-master/frontend`
-2. run docker build app image : `docker build -t aielts-fe .`
-3. run docker start app image : `docker run -dp 3000:3000 aielts-fe`
-4. open browser & visit : `http://localhost:3000/`
+**Use Lovable**
 
-##### Run for development mode
-1. go to service folder : `cd aielts-master/frontend`
-2. install nodemon using npm : `npm i -g nodemon`
-3. run npm script : `npm run dev`
-4. open browser & visit : `http://localhost:3000/frontend`
+Simply visit the [Lovable Project](https://lovable.dev/projects/1989f5ff-cd4d-43dc-b7d4-ddb91dfaf11d) and start prompting.
+
+Changes made via Lovable will be committed automatically to this repo.
+
+**Use your preferred IDE**
+
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+Follow these steps:
+
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
+
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+```
+
+**Edit a file directly in GitHub**
+
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
+
+**Use GitHub Codespaces**
+
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
+
+## What technologies are used for this project?
+
+This project is built with .
+
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
+
+## How can I deploy this project?
+
+Simply open [Lovable](https://lovable.dev/projects/1989f5ff-cd4d-43dc-b7d4-ddb91dfaf11d) and click on Share -> Publish.
+
+## I want to use a custom domain - is that possible?
+
+We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
