@@ -57,8 +57,30 @@ const essaySubmitV2Handler = async (req, res) => {
     }
 };
 
+/**
+ * essaySubmitStreamHandler
+ * @param {object} req - request object
+ * @param {object} res - response object
+ * @param {function} next - next function
+ */
+const essaySubmitStreamHandler = async (req, res) => {
+    try {
+        const result = await essayController.analizeEssayStream(req);
+
+        return res.json(
+            successResponse(result)
+        );
+    } catch (error) {
+        let { status, message } = error;
+        return res.status(status || 500).json(
+            errorResponse(status || 500, message || `something went wrong`)
+        );
+    }
+};
+
 module.exports = {
     handler,
     essaySubmitHandler,
-    essaySubmitV2Handler
+    essaySubmitV2Handler,
+    essaySubmitStreamHandler
 }
